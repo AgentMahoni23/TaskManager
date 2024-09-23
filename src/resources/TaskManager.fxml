@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="meholli.taskManager.Controller">
+    <children>
+        <VBox spacing="10">
+            <children>
+                <HBox spacing="10">
+                    <children>
+                        <TextField fx:id="taskInput" promptText="Neue Aufgabe eingeben..." HBox.hgrow="ALWAYS"/>
+                        <Button text="Hinzufügen" onAction="#handleAddTask"/>
+                    </children>
+                </HBox>
+                <ListView fx:id="taskList" VBox.vgrow="ALWAYS"/>
+                <HBox spacing="10" alignment="CENTER">
+                    <children>
+                        <Button text="Als erledigt markieren" onAction="#handleMarkDone"/>
+                        <Button text="Löschen" onAction="#handleDeleteTask"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
